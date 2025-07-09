@@ -9,29 +9,16 @@
     <form method="post" class="space-y-6">
         {% csrf_token %}
 
-        {% for field in form %}
+       {% for field in form %}
             <div class="mb-4">
-                {% comment %} <label for="{{ field.id_for_label }}" class="block text-gray-700 text-sm font-bold mb-2">
+               <label for="{{ field.id_for_label }}" class="block text-gray-700 text-sm font-bold mb-2">
                     {{ field.label|capfirst }}:
-                </label> {% endcomment %}
+                </label>  
                 {{ field }}
-                {% comment %} {% if field.errors %}
-                    <ul class="errorlist">
-                        {% for error in field.errors %}
-                            <li>{{ error }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %} {% endcomment %}
-            </div>
+   
         {% endfor %}
 
-        {% comment %} {% if form.non_field_errors %}
-            <ul class="errorlist">
-                {% for error in form.non_field_errors %}
-                    <li>{{ error }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %} {% endcomment %}
+
 
         <div class="flex justify-center space-x-4 mt-8">
             <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">

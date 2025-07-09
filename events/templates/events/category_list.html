@@ -11,7 +11,7 @@
 </header>
 
 <main class="max-w-7xl mx-auto px-4 py-10">
-  <div class="flex justify-end mb-6"> {# Added a flex container for the button #}
+  <div class="flex justify-end mb-6">
     <a href="{% url 'category_create' %}" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
         Add New Category
@@ -26,7 +26,7 @@
             <h2 class="text-2xl font-bold text-blue-700 mb-2">{{ category.name }}</h2>
             <p class="text-gray-600">{{ category.description|default:"No description provided." }}</p>
           </div>
-          <div class="mt-4 flex space-x-4"> {# Added flex and space-x for actions #}
+          <div class="mt-4 flex space-x-4"> 
             <a href="{% url 'category_detail' category.pk %}" class="inline-block text-sm text-blue-600 hover:underline">View Events</a>
             <a href="{% url 'category_update' category.pk %}" class="inline-block text-sm text-indigo-600 hover:underline">Edit</a>
             <a href="{% url 'category_delete' category.pk %}" class="inline-block text-sm text-red-600 hover:underline">Delete</a>

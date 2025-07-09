@@ -11,7 +11,6 @@ ENV/
 event_env/
 
 # VSCode / IDE
-.vscode/
 .idea/
 
 # Django-specific
@@ -38,3 +37,5 @@ staticfiles/
 # OS files
 .DS_Store
 Thumbs.db
+config.bat
+node_modules

@@ -46,3 +46,7 @@ node_modules
 !.env.sample
 .envrc
 .venv/
+
+# Environment variables & secrets (added by GitHub Guardian)
+.env
+.env.*
